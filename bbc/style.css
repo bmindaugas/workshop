@@ -1,0 +1,74 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: whitesmoke;
+}
+nav {
+    width: 100%;
+    background-color: #303952;
+}
+/* teviniam elementui nurodant text align center taip centruojasi inline block elementai */
+nav ul { 
+    color: #fff;
+    width: 90%;
+    max-width: 1100px; /* verta apriboti maximalu ploti */
+    margin: auto;
+    font-size: 0px;
+}
+nav ul li { 
+    padding: 15px 20px;
+    display: inline-block;
+    border-right: 1px solid #596275;
+    cursor: pointer;
+    font-size: 16px;
+}
+nav li:hover { 
+    border-bottom: 4px solid #f5cd79;
+    padding-bottom: 11px;
+}
+main { 
+    width: 90%;
+    max-width: 1100px;
+    margin: 80px auto 0px auto;
+    font-size: 0px;
+}
+article { 
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 2%; /* imama nuo tevinio elemento plocio */
+    padding: 20px;
+    box-sizing: border-box; /* MARGIN NEISISKAICIUOJA, o plotis kuri nurodom elementui bus jau iskaiciavus borderius ir marginus */
+    display: inline-block;
+    vertical-align: top; /* table cell reiketu naudot jeigu isvengti flexu */
+}
+article h1 { 
+    font-size: 24px;
+    font-weight: 600px;
+    margin-bottom: 15px;
+}
+article p { 
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 1.5;
+}
+article:nth-of-type(6n + 2), /* paimkime kazkoki tai ntaji article elementa ir po to kas sesta nuo jo */
+article:nth-of-type(6n + 3) { 
+    width: 49%;
+}
+.noFont { 
+    font-size: 0px;
+}
+.noFont * { /* visi elementuose kurie turi klase .nofont */
+    font-size: 16px;
+}
+article:nth-of-type(6n + 2),
+article:nth-of-type(6n + 4),
+article:nth-of-type(6n + 5) { /* elementas kuris turi abi klases */
+    margin-right: 2%;
+}
+article:nth-of-type(6n + 4),
+article:nth-of-type(6n + 5),
+article:nth-of-type(6n + 6) {
+    width: 32%;
+}
+
+/* padaryti taip, kad jis taptu ne 1-2-3 sistemoje, o 1-2-3-4 ir kartojasi. nors kartojasi ir dabar. */
